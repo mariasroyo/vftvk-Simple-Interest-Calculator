@@ -1,16 +1,45 @@
+<!DOCTYPE html>
 <html>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <title>Simple Interest Calculator</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="maindiv">
+
         <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        Amount 
+        <input type="number"  id="principal">  
+    <br/>
+        Rate 
+        <input type="range" min="1" max="20" step="0,25" value="10,25"  id="rate" onchange="rangeVal()">
+        <span id="rateSel"> 10,25 %</span> 
+    <br/>
+        <label for="years">No. of Years</label>
+        <select id="years">
+            <option value="1">1 year</option>
+            <option value="2">2 years</option>
+            <option value="3">3 years</option>
+            <option value="4">4 years</option>
+            <option value="5">5 years</option>
+            <option value="6">6 years</option>
+            <option value="7">7 years</option>
+            <option value="8">8 years</option>
+            <option value="9">9 years</option>
+            <option value="10">10 years</option>
+        </select>
+            
+    <br/>
+        
+        <button onclick="compute()">Compute Interest</button><br>
+        <span id="result"></span>
+    <footer>
+        <p>Copyright by Manu Bueno 2021</p>
+    </footer>
 
-        <button onclick="compute()">Compute</button>
+        </div>
     </body>
+    
 </html>
